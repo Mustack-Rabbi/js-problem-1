@@ -8,11 +8,27 @@
 </head>
 <body>
     <h1>js-problem-1 | Hotel offer Accounts</h1>
-    <h1>Mustack Rabbi (55) </h1>
-    <p id="rabbi"></p>
+    <p>Hotel cost One day 100 tk only. <br> 
+        <b>Offer:</b> (11-20)days 20% offer, After 20 days 50% offer. </p>
+    <p>Mustack Rabbi (55) | Web DD 2nd Batch</p>
+    <h2 style="color: red;" id="cost"></h2>
 
     <script>
-        document.getElementById("rabbi").innerHTML = "Mustack Rabbi (55)";
+
+        var day = 45;
+            if( day <= 10) {
+                taka = day * 100;
+                //document.write(day + " Days Hotel Cost = " + taka+ " " + "Taka");
+                document.getElementById("cost").innerHTML = (day + " Days Hotel Cost = " + taka+ " " + "Taka.");
+            } else if( day <= 20) {
+                firstDiscound = day * 80;
+                taka = firstDiscound + 200; // first (1 - 10) days 200 tk add
+                document.getElementById("cost").innerHTML = (day + " Days Hotel Cost = " + taka+ " " + "Taka.");
+            }else {
+               secondDiscound = day * 50;
+                taka = secondDiscound + 800; // first (1 - 20) days 800 tk add
+               document.getElementById("cost").innerHTML = (day + " Days Hotel Cost = " + taka+ " " + "Taka.");
+            }
     </script>
 </body>
 </html>
